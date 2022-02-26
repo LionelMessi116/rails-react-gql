@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -21,6 +22,4 @@
     "public"
   ],
   "compileOnSave": false,
-  "jsx": "react"
 }
-
