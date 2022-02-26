@@ -19,6 +19,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
     "@types/react": "^17.0.39",
     "webpack-dev-server": "^3"
   }
