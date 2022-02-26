@@ -1,13 +1,13 @@
 import React from 'react';
+
 import Book from './book';
+import { useBooksQuery } from 'hooks/use_books_query';
 
-const dummyData = {
-  books: [{ id: '1', title: 'Active Rails' }],
-};
-
-const loading = false;
+import { withProvider } from 'providers/graphql';
 
 const Books = () => {
+  const { data, loading, error } = useBooksQuery();
+
   if (loading) {
     return <span>Loading...</span>;
   }
@@ -16,7 +16,7 @@ const Books = () => {
     <div>
       <h1>Books</h1>
       <ul>
-        {dummyData.books.map((book) => (
+        {data.books.map((book) => (
           <Book {...book} key={book.id} />
         ))}
       </ul>
@@ -24,4 +24,4 @@ const Books = () => {
   );
 };
 
-export default Books;
+export default withProvider(Books);
