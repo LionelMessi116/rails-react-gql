@@ -17,6 +17,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@types/react": "^17.0.39",
     "webpack-dev-server": "^3"
   }
 }

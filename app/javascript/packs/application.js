@@ -5,10 +5,10 @@ import mount from '../mount';
 import "channels"
 
 // React Components
-import Hello from "../hello_react"
+import Books from "../components/Book/book_container"
 
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-mount({Hello})
+mount({Books})
