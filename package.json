@@ -19,8 +19,14 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/cli": "2.6.2",
     "@types/react": "^17.0.39",
-    "webpack-dev-server": "^3"
+    "webpack-dev-server": "^3",
+    "@graphql-codegen/typescript": "2.4.5",
+    "@graphql-codegen/typescript-operations": "2.3.2",
+    "@graphql-codegen/typescript-react-apollo": "3.2.8"
+  },
+  "scripts": {
+    "gql:codegen": "graphql-codegen --config codegen.yml"
   }
 }
