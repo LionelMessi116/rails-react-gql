@@ -1,0 +1,22 @@
+type Book {
+  createdAt: ISO8601DateTime!
+  id: ID!
+  title: String
+  updatedAt: ISO8601DateTime!
+}
+
+"""
+An ISO 8601-encoded datetime
+"""
+scalar ISO8601DateTime
+
+type Mutation {
+  """
+  An example field added by the generator
+  """
+  testField: String!
+}
+
+type Query {
+  books: [Book!]!
+}
