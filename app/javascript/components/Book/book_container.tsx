@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Book from './book';
-import { useBooksQuery } from 'hooks/use_books_query';
 
 import { withProvider } from 'providers/graphql';
+import { useAllBooksQuery } from 'graphql/types';
 
 const Books = () => {
-  const { data, loading, error } = useBooksQuery();
+  const { data, loading, error } = useAllBooksQuery();
 
   if (loading) {
     return <span>Loading...</span>;
@@ -17,7 +17,7 @@ const Books = () => {
       <h1>Books</h1>
       <ul>
         {data.books.map((book) => (
-          <Book {...book} key={book.id} />
+          <Book key={book.id} {...book} />
         ))}
       </ul>
     </div>
